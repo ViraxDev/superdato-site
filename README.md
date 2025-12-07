@@ -1,21 +1,21 @@
 # SuperDato
 
-Atelier de restauration de montres vintage - Site vitrine moderne avec slider avant/après interactif.
+Vintage watch restoration workshop - Modern showcase website with interactive before/after slider.
 
-## Stack technique
+## Tech Stack
 
 - **React 18** + Vite
-- **Tailwind CSS** pour le styling
-- **Framer Motion** pour les animations
-- **Lucide React** pour les icônes
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **Lucide React** for icons
 
-## Fonctionnalités
+## Features
 
-- Slider avant/après interactif (drag & touch)
-- Chargement dynamique des images de restauration
-- Design "rétro-pop" responsive
-- Formulaire de contact avec upload photo
-- Animations fluides et micro-interactions
+- Interactive before/after slider (drag & touch support)
+- Dynamic image loading from restorations folder
+- Responsive "retro-pop" design
+- Contact form with photo upload
+- Smooth animations and micro-interactions
 
 ## Installation
 
@@ -24,20 +24,20 @@ npm install
 npm run dev
 ```
 
-## Structure des images
+## Image Structure
 
-Les images de restauration sont automatiquement détectées depuis `src/assets/restorations/`.
+Restoration images are automatically detected from `src/assets/restorations/`.
 
-Pour ajouter une nouvelle restauration :
+To add a new restoration:
 
 ```
 src/assets/restorations/
-└── nom-de-la-montre/
-    ├── nom-de-la-montre_before.jpg
-    └── nom-de-la-montre_after.jpg
+└── watch-name/
+    ├── watch-name_before.jpg
+    └── watch-name_after.jpg
 ```
 
-Le titre et le tag sont générés automatiquement depuis le nom du dossier.
+Title and tag are automatically generated from the folder name.
 
 ## Build
 
