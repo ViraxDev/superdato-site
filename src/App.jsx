@@ -172,10 +172,10 @@ const App = () => {
 
   const ServiceCard = ({ icon: Icon, title, desc, color }) => (
     <motion.div
-      variants={{
-        hidden: { y: 30, opacity: 0 },
-        visible: { y: 0, opacity: 1 },
-      }}
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
       className="bg-white border-2 border-black p-6 rounded-xl shadow-[4px_4px_0px_rgba(0,0,0,0.08)] hover:shadow-[6px_6px_0px_rgba(0,0,0,0.1)] transition-shadow relative overflow-hidden group"
     >
       <div
@@ -434,13 +434,7 @@ const App = () => {
             </p>
           </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ staggerChildren: 0.1 }}
-            className="grid md:grid-cols-3 gap-4 md:gap-6"
-          >
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
             <ServiceCard
               icon={Wrench}
               title="Restauration"
@@ -459,7 +453,7 @@ const App = () => {
               desc="Authentification et estimation. Évite les pièges et les montres 'frankenstein'."
               color="bg-[#FF006E]"
             />
-          </motion.div>
+          </div>
 
           {/* Stats */}
           <motion.div
